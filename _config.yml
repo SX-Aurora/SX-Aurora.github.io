@@ -26,18 +26,26 @@ navbar-links:
   About Me: "aboutme"
   Resources:
     - SX-Aurora Wikipedia: "https://en.wikipedia.org/wiki/SX-Aurora_TSUBASA"
-    - Learn markdown: "http://www.markdowntutorial.com/"
-    - GitHub Pages: "https://pages.github.com/"
-  Projects home: "https://github.com/sx-aurora"
+    - NEC SX Overview: "https://www.nec.com/en/global/solutions/hpc/sx"
+    - NEC VEOS software: "http://www.nec.com/en/global/prod/hpc/aurora/ve-software/index.html"
+    - VEOS related docs: "https://github.com/veos-sxarr-NEC/doc"
+    - Aurora Forum: "https://www.hpc.nec"
+  Projects:
+    - VEOS official github: "https://github.com/veos-sxarr-NEC"
+    - SX-Aurora github: "https://github.com/sx-aurora"
+    - Frovedis: "https://github.com/frovedis/frovedis"
+    - LLVM-VE: "https://github.com/SXAuroraTSUBASAResearch/llvm"
+    - MKL-DNN for Aurora: "https://github.com/necla-ml/gen-dnn"
+
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
-#avatar: "/img/ve_card_sq.png"
+avatar: "/img/ve_card_sq.png"
 
 # If you want to have an image logo in the top-left corner instead of the title text,
 # then specify the following parameter
 # title-img: /path/to/image
-title-img: "/img/ve_card_sq.png"
+title-img: "/img/Aurora_chip.png"
 
 # --- Background colour/image options --- #
 
