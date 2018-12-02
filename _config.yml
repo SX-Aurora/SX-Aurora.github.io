@@ -53,6 +53,7 @@ title-img: "/img/Aurora_chip.png"
 
 navbar-col: "#F5F5F5"
 navbar-text-col: "#EFEFEF"
+navbar-hover-col: "#E8E8AF"
 navbar-children-col: "#050505"
 page-col: "#E0EFFF"
 link-col: "#008AFF"

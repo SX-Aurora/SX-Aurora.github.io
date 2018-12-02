@@ -123,6 +123,10 @@ img {
   letter-spacing: 1px;
 }
 
+.navbar-custom .navbar-brand {
+    height: 70px;
+}
+
 .navbar-custom .navbar-brand,
 .navbar-custom .nav li a {
   font-weight: 800;
@@ -133,7 +137,7 @@ img {
 .navbar-custom .navbar-brand:focus ,
 .navbar-custom .nav li a:hover,
 .navbar-custom .nav li a:focus {
-  color: {{ site.hover-col }};
+  color: {{ site.navbar-hover-col }};
 }
 
 .navbar-custom .navbar-brand-logo {
@@ -143,7 +147,7 @@ img {
   transition: padding .5s ease-in-out;
 }
 .navbar-custom .navbar-brand-logo img {
-  height: 50px;
+  height: 70px;
   -webkit-transition: height .5s ease-in-out;
   -moz-transition: height .5s ease-in-out;
   transition: height .5s ease-in-out;
@@ -154,10 +158,13 @@ img {
 .navbar-custom.top-nav-short .navbar-brand-logo img {
   height: 40px;
 }
+.navbar-custom.top-nav-short .navbar-brand {
+  height: 40px;
+}
 
 @media only screen and (min-width: 768px) {
   .navbar-custom {
-    padding: 20px 0;
+    padding: 0px 0 5px;
     -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
     -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
     transition: background .5s ease-in-out,padding .5s ease-in-out;
@@ -388,7 +395,7 @@ footer .theme-by {
 
 @media only screen and (min-width: 768px) {
   .post-preview .post-title {
-    font-size: 36px;
+    font-size: 32px;
   }
 }
 
