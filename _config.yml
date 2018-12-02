@@ -150,7 +150,7 @@ title-separator: "-"
 timezone: "CET/Berlin"
 markdown: kramdown
 highlighter: rouge
-permalink: /:year-:month-:day-:title/
+permalink: /posts/:title/
 paginate: 10
 
 kramdown:
