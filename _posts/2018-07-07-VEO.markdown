@@ -1,0 +1,28 @@
+---
+layout: post
+title: "VEO Vector Engine Offloading, talk at AuroraForum@ISC2018"
+excerpt: A presentation on VEO, the vector engine offloading framework, introducing it's API.
+category: posts
+tags: [api, veo, offloading, programming]
+---
+
+## Presentation from the Aurora Forum at ISC 2018 in Frankfurt
+
+The talk introduces the SX-Aurora TSUBASA vector engine briefly and
+describes the low level **VEO** mechanisms usable for accelerator
+style programming with the VE. Examples for the API usage follow,
+including Python bindings to VEO.
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRwjJ3y-F-6uYdzzFtkF9PJcxAttqqUtCtywgHI8-6mQT5j1DqkJNS9FLLzjq2icjrSuWDBRIZnwXoR/embed?start=false&loop=false&delayms=10000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+</iframe>
+
+
+---
+
+References and links:
+
+* [veoffload project](https://github.com/SX-Aurora/veoffload)
+* [py-veosinfo](https://github.com/SX-Aurora/py-veosinfo)
+* [py-veo](https://github.com/SX-Aurora/py-veo)
+* [py-vecblas](https://github.com/SX-Aurora/py-vecblas)
+* [Wikipedia](https://en.wikipedia.org/wiki/SX-Aurora_TSUBASA)
