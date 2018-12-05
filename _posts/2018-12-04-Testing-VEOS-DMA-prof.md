@@ -125,7 +125,7 @@ The simplest and most direct test is a benchmark that only does VE-VH
 DMA transfers. The following test is using the functions
 `ve_recv_data()` and `ve_send_data()` directly. These functions are
 actually used by the IO related system calls inside the pseudo
-process. The use unregistered VH buffers.
+process. They use unregistered VH buffers.
 
 In order to get reproducible (and better) results, turn the VH cpufreq
 governor into performance mode:
