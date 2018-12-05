@@ -6,7 +6,7 @@ excerpt: "A set of RPMs for VEOS, libved, ve_drv and vp which implement an accel
 image: /img/highway-aurora.jpg
 bigimg: /img/highway-aurora.jpg
 category: posts
-tags: [veos, dma, io, vector, sxaurora]
+tags: [veos, dma, io, vector, sxaurora, tools]
 ---
 *Erich Focht*
 
