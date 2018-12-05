@@ -8,6 +8,8 @@ category: posts
 tags: [llvm, compiler, vector sxaurora, projects]
 ---
 
+*Erich Focht*
+
 ## Introduction
 
 NEC and the Compiler Design Lab of Saarland University
