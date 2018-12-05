@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Testing VEOS with accelerated DMA and safe profiling
+title: Testing VEOS with accelerated DMA and VE profiling
 author: Erich Focht
 excerpt: "A set of RPMs for VEOS, libved, ve_drv and vp which implement an accelerated variant of the DMA manager for privileged DMA that is aware of huge pages. In addition this version contains patches that fix lock-ups that were happening when using veprof, the external profiling tool."
 image: /img/highway-aurora.jpg
