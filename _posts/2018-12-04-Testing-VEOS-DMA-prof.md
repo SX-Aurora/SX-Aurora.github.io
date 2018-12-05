@@ -13,7 +13,8 @@ tags: [veos, dma, io, vector, sxaurora, tools]
 
 This post presents a testing VEOS version, derived from the official
 v1.3.2 with two added features: accelerated DMA and a fix for external
-sampling VE profiling. It is a follow-up on the post ["Building
+sampling VE profiling, as well as instructions on how to test these
+new features. It is a follow-up on the post ["Building
 VEOS"](https://sx-aurora.github.io/posts/Building-VEOS/) that was
 describing
 
