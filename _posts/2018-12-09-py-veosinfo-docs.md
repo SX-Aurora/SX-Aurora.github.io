@@ -3,6 +3,7 @@ layout: post
 title: "py-veosinfo: A Documentation Attempt" 
 author: Erich Focht
 excerpt: "The Python bindings to the VE information library veosinfo are a simple and direct way of accessing programmatically details about the vector engines installed in a system."
+image: /img/python_logo.png
 category: posts
 tags: [monitoring, api, python, vector, sxaurora]
 ---
