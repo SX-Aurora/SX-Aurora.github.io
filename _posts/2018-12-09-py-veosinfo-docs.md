@@ -32,7 +32,7 @@ The [*py-veosinfo*](https://github.com/SX-Aurora/py-veosinfo) Python
 interface to the *veosinfo* vector engine library provides various details
 on the SX-Aurora Vector Engines located in the current host:
 * lists VEs in the system and their state,
-* information in the VE architecture,
+* information on the VE architecture,
 * information on caches, frequencies of each VE core,
 * load and memory statistics of VEs,
 * information on processes running on the VEs,
