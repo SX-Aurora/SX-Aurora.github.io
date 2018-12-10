@@ -23,7 +23,7 @@ description: Tips, tricks, findings on the NEC SX-Aurora vector engine, programm
 
 # List of links in the navigation bar
 navbar-links:
-  Blog: "/"
+  Blog: "https://sx-aurora.github.io"
   About: "aboutme"
   Resources:
     - SX-Aurora Wikipedia: "https://en.wikipedia.org/wiki/SX-Aurora_TSUBASA"
