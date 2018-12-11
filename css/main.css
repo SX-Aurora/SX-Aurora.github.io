@@ -158,11 +158,13 @@ img {
   -moz-transition: padding .5s ease-in-out;
   transition: padding .5s ease-in-out;
 }
-.navbar-custom .navbar-brand-logo img {
-  height: 70px;
-  -webkit-transition: height .5s ease-in-out;
-  -moz-transition: height .5s ease-in-out;
-  transition: height .5s ease-in-out;
+@media only screen and (min-width: 366px) {
+    .navbar-custom .navbar-brand-logo img {
+        height: 10px;
+        -webkit-transition: height .5s ease-in-out;
+        -moz-transition: height .5s ease-in-out;
+        transition: height .5s ease-in-out;
+    }
 }
 .navbar-custom.top-nav-short .navbar-brand-logo {
   padding-top: 5px;
@@ -170,10 +172,18 @@ img {
 .navbar-custom.top-nav-short .navbar-brand-logo img {
   height: 40px;
 }
-.navbar-custom.top-nav-short .navbar-brand {
-  height: 40px;
+@media only screen and (min-width: 366px) {
+    .navbar-custom.top-nav-short .navbar-brand {
+        height: 40px;
+    }
 }
-
+@media only screen and (max-width: 365px) {
+    .navbar-custom.top-nav-short .navbar-brand {
+        padding-bottom: 5px;
+        padding-top: 5px;
+        height: 50px
+    }
+}
 @media only screen and (min-width: 768px) {
   .navbar-custom {
     padding: 0px 0 5px;
@@ -584,6 +594,17 @@ footer .theme-by {
   }
   .header-section.has-img .big-img {
     margin-bottom: 0;
+  }
+  .navbar-custom .navbar-brand-logo {
+      display: none;
+      height: 0;
+  }
+  .navbar-custom .navbar-brand {
+      /*margin-top: -30px;*/
+      padding-bottom: 5px;
+      padding-top: 5px;
+      width: 75%;
+      height: 50px;
   }
 }
 @media only screen and (max-width: 325px) {
