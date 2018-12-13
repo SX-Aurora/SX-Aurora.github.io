@@ -83,7 +83,7 @@ we can see the used page sizes: 64MB and 2MB.
 
 **NOTE:** When calling the normal, x86 native *pmap* utility with the
 same *PID*, the layout shows how the VE process map is embedded into
-its pseudo process map.
+its pseudo process map at address *0x600000000000*.
 ```bash
 $ pmap -X 283275
 283275:   /opt/nec/ve/libexec/ve_exec -d /dev/veslot0 -s /var/opt/nec/ve/veos/veos0.sock -c -1 -- ./p
