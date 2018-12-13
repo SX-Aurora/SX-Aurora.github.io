@@ -48,7 +48,7 @@ services and unloaded the VE related kernel modules. For instructions
 on this check [this post](https://sx-aurora.github.io/posts/VEOS-yum-repository).
 
 Install the RPMs for example with:
-```
+```bash
 cd BUILD_1.3.2_4dma
 rpm -Fhv *.x86_64.rpm
 ```
@@ -63,14 +63,14 @@ source RPMs are provided, thus the packages can be rebuilt for CentOS
 The packages can be built by using the scripts in
 [github.com/efocht/build-veos](https://githib.com/efocht/build-veos):
 
-```
+```bash
 git clone -b v1.3.2-4dma https://github.com/efocht/build-veos.git
 ln -s build-veos/x .
 ```
 
 ### Clone repositories, checkout proper branch
 
-```
+```bash
 mkdir BLD
 cd BLD
 GITH="https://github.com/efocht"
@@ -90,7 +90,7 @@ ln -s build-veos/x .
 
 ### Build RPMs and replace old ones by new ones
 
-```
+```bash
 # stop VEOS and VE related services, unload VE modules
 x/vemods_unload
 
@@ -144,7 +144,7 @@ should find the appropriate directories in
 */sys/kernel/mm/hugepages*. This approach uses 2MB huge pages, so make
 sure there is a sufficient number of them in the system. Increase their
 number eg with
-```
+```bash
 sudo sysctl -w vm.nr_hugepages=8192
 ```
 
@@ -168,13 +168,13 @@ them inside the *ve_exec* context. Since we don't want to modify
 *ve_exec* or its *libvepseudo.so* library, the easiest way to let the
 syscalls use huge pages buffers is to run the program under `hugectl`,
 the tool from the *libhugetlbfs-utils* package.
-```
+```bash
 hugectl --heap <VE_EXECUTABLE> [...]
 ```
 or, alternatively, set the environment variables preloading
 *libhugetlbfs.so* and replacing *malloc* with something
 huge-page-aware:
-```
+```bash
 export LD_PRELOAD=libhugetlbfs.so
 export HUGETLB_MORECORE=yes
 export HUGETLB_VERBOSE=2
@@ -184,7 +184,7 @@ export HUGETLB_VERBOSE=2
 ### Building and Running Tests
 
 Get the repository with the tests and build them:
-```
+```bash
 git clone https://github.com/efocht/vhcall-memtransfer-bm.git
 
 # build
@@ -193,7 +193,7 @@ make
 ```
 
 Run single transfer tests, for example one 40MB transfer on small pages, from VE to VH:
-```
+```bash
 $ ./ve2vh -s $((40*1024))
 prepared
 4952.983801[MiB/s]
@@ -211,7 +211,7 @@ Total: 10389.310854[MiB/s]
 Or run scans over a range of buffer sizes:
 
 **VH to VE, small pages (4k), unpinned, unregistered buffer***
-```
+```bash
 $ ./scan_vh2ve.sh
  buff kb   BW MiB/s
       32       138
@@ -233,7 +233,7 @@ $ ./scan_vh2ve.sh
 ```
 
 **VH to VE, huge pages (2M), unpinned, unregistered buffer***
-```
+```bash
 $ HUGE=1 ./scan_vh2ve.sh
  buff kb   BW MiB/s
       32       136
@@ -286,7 +286,7 @@ the test release described in this post: **v1.3.2-4dma**, therefore
 ### Build *veprof*
 
 Clone the repository and build the tools:
-```
+```bash
 git clone https://github.com/SX-Aurora/veprof.git
 
 cd veprof
@@ -302,27 +302,27 @@ and the postprocessing, respectively.
 The following is taken more or less directly from the README.md of Holger's *veprof* repository.
 
 Sample with 100hz:
-```
+```bash
 veprof ./exe
 ```
 
 Sample with 50 hz:
-```
+```bash
 veprof -s 50 ./exe
 ```
 
 Sample a wrapper calling exe
-```
+```bash
 veprof -e ./exe ./wrapper.sh
 ```
 
 Sample an openmp code (works only with VEOS *v1.3.2-4dma*, currently):
-```
+```bash
 veprof --openmp ./exe
 ```
 
 Display gathered results:
-```
+```bash
 veprof_display veprof.out
 ```
 

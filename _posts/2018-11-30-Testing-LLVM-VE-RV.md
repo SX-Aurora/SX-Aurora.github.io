@@ -40,7 +40,7 @@ does not have full functionality. Without RV LLVM-VE can only produce
 vector code with the help of the intrinsics. With RV (rvclang) uses a
 "guided vectorization" approach. Loops/regions preceeded by the
 directive
-```
+```c
 #pragma omp simd safelen(256)
 ```
 will be forcibly vectorized. There is no dependency analysis which
@@ -72,17 +72,17 @@ A rather new version of gcc is needed for build, preferable gcc
 version 7 or above. On CentOS 7 or RHEL 7 use the Software Collections
 repositories (SCL). On CentOS 7, enable the *extras* repository,
 eg. in */etc/yum.repos.d/CentOS-Base.repo*. Then install
-```
+```sh
 yum install centos-release-scl
 ```
 
 Now install the *scl-utils* package (this step should be sufficient on RHEL7):
-```
+```sh
 yum install scl-utils
 ```
 
 Finally install the new *gcc* and *gcc-c++* packages:
-```
+```sh
 yum install devtoolset-7 devtoolset-7-gcc devtoolset-7-gcc-c++
 ```
 
@@ -94,21 +94,21 @@ repackaged version from
 http://compilers.cs.uni-saarland.de/people/moll/llvmrv_demo-281118.tar.gz
 with a changed script and a tuned ncc code example. Download it from
 the command line:
-```
+```sh
 wget https://sx-aurora.github.io/img/llvmrv_demo-281118a.tar.gz
 ```
 
 ### Build
 
 Enable the new gcc compilers from SCL:
-```
+```sh
 scl enable devtoolset-7 bash
 ```
 
 Unpack the demo archive and build the LLVM stack for VE in one (long)
 step:
 
-```
+```sh
 tar -xzf llvmrv_demo-281118a.tar.gz
 cd workspace
 source scripts/bootstrap.sh
@@ -119,13 +119,13 @@ source scripts/bootstrap.sh
 When experimenting later with the LLVM-VE-RV compiler, set the
 appropriate environment variables and paths by:
 
-```
+```bash
 source scripts/setup_env.sh
 ```
 
 Now you should be able to call *clang*, which supports `--target=ve`,
 but vectorizes only through explicitly used intrinsics. Or go ahead using *rvclang* which does guided vectorization of loops preceeded by the directive:
-```
+```c
 #pragma omp simd safelen(256)
 ```
 
@@ -133,7 +133,7 @@ but vectorizes only through explicitly used intrinsics. Or go ahead using *rvcla
 ## Testing
 
 Compile code with *rvclang* or *clang*:
-```
+```sh
 rvclang --target=VE -O2 -fopenmp <FILE.C> -c -o <FILE>.o
 ```
 
@@ -141,7 +141,7 @@ rvclang --target=VE -O2 -fopenmp <FILE.C> -c -o <FILE>.o
 ### Clenshaw Demo
 
 A little example that shows the advantages of outer loop vectorization is included with the demo:
-```
+```sh
 cd demo
 make
 

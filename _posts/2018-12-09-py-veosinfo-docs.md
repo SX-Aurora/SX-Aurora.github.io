@@ -55,7 +55,7 @@ some additions that are aimed at making performance monitoring easy.
 
 When installing from PYPI (this possible now!) the module requires the
 package *veosinfo-devel* to be installed.
-```
+```bash
 pip install py-veosinfo
 ```
 
@@ -63,7 +63,7 @@ The module can be built from the cloned github repository, in that
 case you must install *cython*. I usually do this from inside a
 virtualenv tht allows me to keep the modules fresher than what CeontOS
 7 has in its repositories.
-```
+```bash
 git clone https://github.com/sx-aurora/py-veosinfo.git
 cd py-veosinfo
 make install
@@ -81,7 +81,7 @@ py-veosinfo-1.3.2-1.src.rpm`.
 ## Usage
 
 In your python program import the `veosinfo` python module, for example by doing:
-```
+```python
 from veosinfo import *
 ```
 
@@ -118,7 +118,7 @@ Parameter:
 Returns 0 on success, -1 on error.
 
 Example:
-```
+```python
 >>> arch_info(0)
 {'machine': 've', 'hw_platform': 've', 'processor': 've'}
 ```
@@ -142,7 +142,7 @@ Returns 0 or 1 on success and -1 on failure:
 Returns the number of cores of a given VE specified by *nodeid*.
 
 Example:
-```
+```python
 >>> core_info(0)
 8
 ```
@@ -154,7 +154,7 @@ dict contains the attributes like modelname, vendor, family, stepping,
 mhz, cache\_size, cores, model, cache\_name.
 
 Example:
-```
+```python
 >>> cpu_info(0)
 {'modelname': 'VE_1_136', 'vendor': '0x1bcf', 'family': '1', 'bogomips': '1400', 'nnodes': 1,
  'stepping': '0', 'core_per_socket': 8, 'op_mode': '64 bit', 'socket': 1, 'thread_per_core': 1,
@@ -168,7 +168,7 @@ Example:
 Returns the CPU frequency of the specified *nodeid*.
 
 Example:
-```
+```python
 >>> cpufreq_info(0)
 1400L
 ```
@@ -182,7 +182,7 @@ on VE *nodeid*. The values correspond to the array of register offsets
 S08, etc... At most 64 registers can be retrieved in one call.
 
 Example:
-```
+```python
 >>> get_regvals(0, 246283, [USRCC, PMC00, PMC01])
 [37939912918L, 38751941050L, 15117305941L]
 ```
@@ -194,7 +194,7 @@ Returns a dict with the usual Linux load averages over 1, 5 and 15
 minutes of the VE specified by *nodeid*.
 
 Example:
-```
+```python
 >>> loadavg_info(0)
 {'av_5': 0.0, 'av_15': 0.0, 'total_proc': 0, 'av_1': 0.0, 'runnable': 0}
 ```
@@ -204,7 +204,7 @@ Example:
 Retrieve memory information of the specified VE *nodeid*.
 
 Example:
-```
+```python
 >>> mem_info(0)
 {'kb_committed_as': 0L, 'kb_hugepage_used': 131072L, 'kb_low_total': 0L,
  'kb_swap_cached': 0L, 'kb_dirty': 0L, 'kb_main_total': 50331648L,
@@ -221,7 +221,7 @@ Example:
 Return information on online and offline VE nodes in the system.
 
 Example:
-```
+```python
 >>> node_info()
 {'status': [0], 'cores': [8], 'nodeid': [0], 'total_node_count': 1}
 ```
@@ -232,7 +232,7 @@ Returns a dict with statistics of the VE process specified by *pid* on
 the VE node *nodeid*.
 
 Example:
-```
+```python
 >>> pidstat_info(0, 334575)
 {'min_flt': 0L, 'cutime': 0L, 'rss': 7680000, 'endcode': 105553117303192L,
  'ksteip': 139716362733200L, 'wchan': 0L, 'cguest_time': 0,
@@ -252,7 +252,7 @@ Example:
 Returns information about the fan speeds of a certain VE node.
 
 Example:
-```
+```python
 >>> read_fan(0)
 {'count': 0, 
  'fan_min': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 
@@ -268,7 +268,7 @@ Returns information about the temperature sensors of the specified VE
 node *nodeid*.
 
 Example:
-```
+```python
 >>> read_temp(0)
 {'count': 19, 
  'temp_max': [125.0, 125.0, 125.0, 125.0, 125.0, 125.0, 125.0, 125.0, 2.0, 125.0, 125.0,
@@ -289,7 +289,7 @@ Example:
 Returns voltage information of several sensors on the specified VE.
 
 Example:
-```
+```python
 >>> read_voltage(0)
 {'count': 14, 
  'cpu_volt': [0.8875, 0.9048, 1.245699, 1.243502, 1.243502, 1.245699, 2.473822, 1.770782,
@@ -320,7 +320,7 @@ lowest 8 bits are relevant.
 The functions return 0 on success and -1 on failure.
 
 Example:
-```
+```python
 >>> from veosinfo import *
 >>> sched_getaffinity(0, 23360)
 255L
@@ -336,7 +336,7 @@ Example:
 Returns CPU statistics information of each code of the specified VE.
 
 Example:
-```
+```python
 >>> stat_info(0)
 {'btime': 1519312224282053L, 'processes': 270, 'softirq': [0L, 0L, 0L, 0L, 0L, 0L, 0L, 0L],
  'iowait': [0L, 0L, 0L, 0L, 0L, 0L, 0L, 0L], 'hardirq': [0L, 0L, 0L, 0L, 0L, 0L, 0L, 0L],
@@ -353,7 +353,7 @@ Uptime in seconds of the specified VE *nodeid*. This is the time since
 the latest boot of VEOS for that VE.
 
 Example:
-```
+```python
 >>> uptime_info(0)
 386214.28571428574
 ```
@@ -363,7 +363,7 @@ Example:
 Returns virtual memory statistics information of the specified VE node.
 
 Example:
-```
+```python
 >>> vmstat_info(0)
 {'pswpout': 0L, 'pgscan_direct': 0L, 'pswpin': 0L, 'pgmajfault': 0L,
  'pgfault': 0L, 'pgscan_kswapd': 0L, 'pgsteal': 0L, 'pgfree': 0L}
@@ -374,7 +374,7 @@ Example:
 Return VE sysfs path corresponding to a certain VE *nodeid*.
 
 Example:
-```
+```python
 >>> ve_sysfs_path(0)
 '/sys/devices/pci0000:64/0000:64:00.0/0000:65:00.0/ve/ve1'
 ```
@@ -411,7 +411,7 @@ reading the file *task_id_all* from the directory returned by
 *ve_sysfs_path()*.
 
 Example:
-```
+```python
 >>> ve_pids(0)
 [298038, 298002]
 ```
@@ -430,7 +430,7 @@ Consecutive calls of *ve_pid_perf()* are used to calculate performance
 metrics of running VE programs in the tools *veperf*.
 
 Example:
-```
+```python
 >>> ve_pid_perf(0, 298002)
 {'VLEC': 474579296208L, 'VLCME': 19891534L, 'VE2': 8062493240158L, 'VE': 8062492910686L,
  'PCCC': 37961384L, 'VECC': 79381274156L, 'VLDEC': 212519229L, 'USRCC': 79385051298L,
