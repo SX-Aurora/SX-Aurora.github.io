@@ -160,7 +160,7 @@ img {
 }
 @media only screen and (min-width: 366px) {
     .navbar-custom .navbar-brand-logo img {
-        height: 10px;
+        height: 50px;
         -webkit-transition: height .5s ease-in-out;
         -moz-transition: height .5s ease-in-out;
         transition: height .5s ease-in-out;
