@@ -3,6 +3,7 @@ layout: post
 title: "Py-veo by Examples" 
 author: Erich Focht
 excerpt: "py-veo implements the VEO API for Vector Engine Offloading. It allows the use of the VE from Python programs, even interactively and via IPython or Jupyter notebooks. VE kernels must be written in C, C++ or Fortran."
+image: /img/pyveo_components2.png
 category: posts
 tags: [python, veo, accelerator, offloading, vector, sxaurora]
 ---
