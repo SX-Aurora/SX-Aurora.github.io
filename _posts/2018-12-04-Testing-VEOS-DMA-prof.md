@@ -7,6 +7,7 @@ image: /img/highway-aurora.jpg
 bigimg: /img/highway-aurora.jpg
 show-avatar: false
 category: posts
+comments: true
 tags: [veos, dma, io, vector, sxaurora, tools]
 ---
 *Erich Focht*
