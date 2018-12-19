@@ -4,6 +4,7 @@ title: "VE process memory layout: pmap"
 author: Erich Focht
 excerpt: "Visualize the virtual memory layout of VE processes and see details of each virtual memory area."
 category: posts
+comments: true
 tags: [memory, VM, monitoring, vector, sxaurora]
 ---
 

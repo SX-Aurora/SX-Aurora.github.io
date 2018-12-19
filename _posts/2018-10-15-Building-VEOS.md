@@ -4,6 +4,8 @@ title: Building VEOS Packages
 author: Erich Focht
 excerpt: "Little helper tools that make it easy to build VEOS, the VE related kernel modules, libved, VEO and start tweaking the VE operating system."
 category: posts
+comments: true
+tags: [veos, tools, vector, sxaurora]
 ---
 
 *Erich Focht*

@@ -4,6 +4,7 @@ title: VE monitoring with veperf
 author: Erich Focht
 excerpt: Simple and easy external performance monitoring of VE processes.
 category: posts
+comments: true
 tags: [monitoring, tools, performance, vector, sxaurora]
 ---
 

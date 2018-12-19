@@ -3,6 +3,7 @@ layout: post
 title: VHcall offloading from native VE program to VH
 excerpt: Using the vector engine host as an accelerator for unportable or poorly vectorizable scalar code.
 category: posts
+comments: true
 tags: [api, vector, sxaurora, offloading]
 ---
 

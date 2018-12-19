@@ -4,6 +4,8 @@ title: VEOS yum Repository on the Web
 author: Erich Focht
 excerpt: "Updating or installing VEOS related packages directly from an online yum repository."
 category: posts
+comments: true
+tags: [veos, admin, repository, yum, sxaurora, vector]
 ---
 
 *Erich Focht*

@@ -4,7 +4,8 @@ title: SX-Aurora VE hardware overview
 excerpt: Details of the VE hardware, specs, functionality, design.
 image: /img/ve_card_no_cooler.jpg
 category: posts
-tags: [hardware, vector, sxaurora]
+comments: true
+tags: [hardware, intro, vector, sxaurora]
 ---
 
 *Erich Focht*

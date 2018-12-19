@@ -3,6 +3,7 @@ layout: post
 title: First steps with the SX-Aurora TSUBASA vector engine
 excerpt: A little "getting started" user guide for new users of the NEC SX-Aurora TSUBASA vector engine.
 category: posts
+comments: true
 tags: [introduction, vector, sxaurora, tools, programming]
 ---
 

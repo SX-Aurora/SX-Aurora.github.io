@@ -4,6 +4,8 @@ title: Debugging with log4crc
 excerpt: "Controlling debug logs for various components of the VE operating system and the pseudo process."
 author: Erich Focht
 category: posts
+comments: true
+tags: [debug, vector, sxaurora, veos]
 ---
 
 *Erich Focht*

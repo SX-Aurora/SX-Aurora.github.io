@@ -5,6 +5,7 @@ author: Erich Focht
 excerpt: "An easy way to build the LLVM-VE-RV stack and use it for testing and playing with the compiler."
 image: /img/VE_Dragon.png
 category: posts
+comments: true
 tags: [llvm, compiler, vector sxaurora, projects]
 ---
 
