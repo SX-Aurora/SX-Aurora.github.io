@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "WPMVP 2019 Vector Computer Evolution"
-excerpt: A presentation introducing the SX-Aurora Tsubasa in the historical context of vector computers.
+title: "Vector Computer Evolution (WPMVP 2019)"
+excerpt: A presentation introducing the SX-Aurora Tsubasa in the historical context of vector computers development.
 category: posts
 comments: true
 tags: [ve, sxaurora, vector, history]
