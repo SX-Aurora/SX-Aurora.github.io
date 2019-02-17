@@ -14,7 +14,7 @@ of vector computer evolution.
 
 Unfortunately the animated GIFs in the presentation (showing the data flow in vector, SIMD pipes) do not work.
 
-<iframe src="https://onedrive.live.com/embed?cid=E4A3170D82C7B38A&amp;resid=E4A3170D82C7B38A%21559&amp;authkey=AKWIQP9G4oez9bU&amp;em=2&amp;wdAr=1.7777777777777777" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office Online</a>.</iframe>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRV2Uh4uAacrP-sFUkP-2Bdm8MEjlOJwh-97ommLPt1DlSY9z0x5_PxIYYZJ_4d5TnZKgs2r3cfSJsI/embed?start=false&loop=false&delayms=30000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 ---
 
