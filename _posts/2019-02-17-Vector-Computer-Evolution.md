@@ -5,6 +5,7 @@ excerpt: A presentation introducing the SX-Aurora Tsubasa in the historical cont
 category: posts
 comments: true
 tags: [ve, sxaurora, vector, history]
+draft: true
 ---
 
 ### Keynote at the WPMVP 2019 workshop at PPoPP 2019, Washington, DC, February 16, 2019
