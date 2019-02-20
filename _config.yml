@@ -26,11 +26,12 @@ navbar-links:
   Blog: "https://sx-aurora.github.io"
   About: "aboutme"
   Resources:
-    - SX-Aurora Wikipedia: "https://en.wikipedia.org/wiki/SX-Aurora_TSUBASA"
+    - SX-Aurora Documentation: "https://www.hpc.nec/documents"
     - NEC SX Overview: "https://www.nec.com/en/global/solutions/hpc/sx"
     - NEC VEOS software: "http://www.nec.com/en/global/prod/hpc/aurora/ve-software/index.html"
     - VEOS related docs: "https://github.com/veos-sxarr-NEC/doc"
-    - Aurora Forum: "https://www.hpc.nec"
+    - Aurora Web Forum: "https://www.hpc.nec"
+    - SX-Aurora Wikipedia: "https://en.wikipedia.org/wiki/SX-Aurora_TSUBASA"
   Projects:
     - VEOS official github: "https://github.com/veos-sxarr-NEC"
     - SX-Aurora github: "https://github.com/sx-aurora"
