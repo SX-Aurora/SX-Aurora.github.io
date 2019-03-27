@@ -27,7 +27,7 @@ repositories where the VE development is reflected on the
 pre-license-change state of LLVM. These repositories (branches
 *develop2*) are still under legacy LLVM license.
 
-The list of VE intrinsics is now [here](/img/intrinsics.html).
+The list of VE intrinsics is now [here](/ve-llvm-intrinsics.html).
 
 
 ## Introduction
@@ -40,7 +40,7 @@ are visible in the repository
 [https://github.com/SXAuroraTSUBASAResearch/llvm](https://github.com/SXAuroraTSUBASAResearch/llvm)
 and the developments have various directions:
 
-* Supporting a complete set of intrinsics (AKA builtins) for vector operations: [intrinsics.html](/img/intrinsics.html). The current *ncc* compiler does not support officially intrinsics, and SIMD vector extensions of scalar processors have made programming with intrinsics quite popular. It is much simpler than coding in assembler and allows to fully control the produced vector code. 
+* Supporting a complete set of intrinsics (AKA builtins) for vector operations: [intrinsics.html](/ve-llvm-intrinsics.html). The current *ncc* compiler does not support officially intrinsics, and SIMD vector extensions of scalar processors have made programming with intrinsics quite popular. It is much simpler than coding in assembler and allows to fully control the produced vector code. 
 * Integrating the [RegionVectorizer](https://github.com/cdl-saarland/rv) (RV) of Simon Moll into LLVM-VE. RV provides advanced vectorization functionality like outer loop vectorization, nested loop vectorization, whole function vectorization and more.
 * Vectorization research at CDL on various topics.
 * Pushing the LLVM-SVE effort together with the other architectures that have "scalable vector extensions": ARM-SVE and RISC-V V. Interestingly the new architecture in the round, NEC SX-Aurora, is the most easily accessible one, being purchasable since February 2018 while ARM-SVE is available for very few people as prototypes, and RISC-V's vector ISA is currently "paperware", but seems to have a bright future within the European Processor Innitiative. So LLVM-VE and SX-Aurora are currently most realistic playground for the SVE effort. An RFC has been published at [https://reviews.llvm.org/D53613](https://reviews.llvm.org/D53613) and is the foundation of a new, SVE related set of intrinsics which are vector length and vector masks aware.
