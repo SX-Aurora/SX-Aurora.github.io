@@ -11,6 +11,23 @@ tags: [llvm, compiler, vector sxaurora, projects]
 
 *Erich Focht*
 
+## Important Notice (March 26 2019)
+
+LLVM has changed the license to Apache 2 while the LLVM-VE
+repositories at
+[https://github.com/SXAuroraTSUBASAResearch/](https://github.com/SXAuroraTSUBASAResearch/)
+were released under the former LLVM license: BSD-2. The change of the
+license is currently being discussed, until this is solved, the
+repositories were removed from github. Which means: the links in this
+post are currently **wrong**!
+
+People interested in the LLVM-VE development can instead refer to the
+[https://github.com/sx-aurora-dev](https://github.com/sx-aurora-dev/)
+repositories where the VE development is reflected on the
+pre-license-change state of LLVM. These repositories (branches
+*develop2*) are still under legacy LLVM license.
+
+
 ## Introduction
 
 NEC and the Compiler Design Lab of Saarland University
