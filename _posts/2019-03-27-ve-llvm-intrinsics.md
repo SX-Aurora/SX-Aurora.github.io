@@ -1,3 +1,13 @@
+---
+layout: post
+title: VE LLVM Intrinsics
+author: Erich Focht
+excerpt: "The VE intrinsics available in the LLVM backend for the SX-Aurora TSUBASA Vector Engine"
+category: posts
+tags: [llvm, compiler, vector, sxaurora, intrinsics, builtins]
+---
+
+
 <a href="#sec0">5.3.2.7. Vector Transfer Instructions</a><br>
 <a href="#sec1">5.3.2.8. Vector Fixed-Point Arithmetic Operation Instructions</a><br>
 <a href="#sec2">5.3.2.9. Vector Logical Arithmetic Operation Instructions</a><br>
