@@ -9,6 +9,7 @@ tags: [llvm, compiler, vector, sxaurora, intrinsics, builtins]
 
 
 ## 0 Vector Transfer Instructions
+
 | Instruction | Function | asm | Description |
 | --- | --- | --- | --- |
 | VLD | __vr _ve_vld_vss(unsigned long int sy, void const* sz) | vld |  |
@@ -81,6 +82,7 @@ tags: [llvm, compiler, vector, sxaurora, intrinsics, builtins]
 | VMV | __vr _ve_vmv_vsv(unsigned int N, __vr vz) | vmv |  |
 
 ## 1 Vector Fixed-Point Arithmetic Operation Instructions
+
 | Instruction | Function | asm | Description |
 | --- | --- | --- | --- |
 | VADD | __vr _ve_vaddul_vvv(__vr vy, __vr vz) | vaddu.l | vx[:] = vy[:] + vz[:] |
@@ -326,6 +328,7 @@ tags: [llvm, compiler, vector, sxaurora, intrinsics, builtins]
 | VCMX | __vr _ve_vminsl_vsvmv(long int I, __vr vz, __vm256 vm, __vr vd) | vmins.l | vx[:] = vm[:] ? min(I, vz[:]) : vd[:] |
 
 ## 2 Vector Logical Arithmetic Operation Instructions
+
 | Instruction | Function | asm | Description |
 | --- | --- | --- | --- |
 | VAND | __vr _ve_vand_vvv(__vr vy, __vr vz) | vand | vx[:] = vy[:] & vz[:] |
@@ -369,6 +372,7 @@ tags: [llvm, compiler, vector, sxaurora, intrinsics, builtins]
 | VSEQ | __vr _ve_pvseq_v() | pvseq | vx[:] = i |
 
 ## 3 Vector Shift Instructions
+
 | Instruction | Function | asm | Description |
 | --- | --- | --- | --- |
 | VSLL | __vr _ve_vsll_vvv(__vr vz, __vr vy) | vsll | vx[:] = vz[:] << (vy[:] & 0x3f) |
@@ -431,6 +435,7 @@ tags: [llvm, compiler, vector, sxaurora, intrinsics, builtins]
 | VSFA | __vr _ve_vsfa_vvssmv(__vr vz, unsigned long int I, unsigned long int sz, __vm256 vm, __vr vd) | vsfa | vx[:] = vm[:] ? (vz[:] << (I & 0x7)) + sz : vd[:] |
 
 ## 4 Vector Floating-Point Operation Instructions
+
 | Instruction | Function | asm | Description |
 | --- | --- | --- | --- |
 | VFAD | __vr _ve_vfaddd_vvv(__vr vy, __vr vz) | vfadd.d | vx[:] = vy[:] + vz[:] |
@@ -629,6 +634,7 @@ tags: [llvm, compiler, vector, sxaurora, intrinsics, builtins]
 | VCVS | __vr _ve_vcvtsd_vv(__vr vy) | vcvt.s.d | vx[:] = (float)vy[:] |
 
 ## 5 Vector Mask Arithmetic Instructions
+
 | Instruction | Function | asm | Description |
 | --- | --- | --- | --- |
 | VMRG | __vr _ve_vmrg_vvvm(__vr vy, __vr vz, __vm256 vm) | vmrg |  |
@@ -655,6 +661,7 @@ tags: [llvm, compiler, vector, sxaurora, intrinsics, builtins]
 | VFMF | __vm512 _ve_pvfmks_McvM(int cc, __vr vz, __vm512 vm) |  |  |
 
 ## 6 Vector Recursive Relation Instructions
+
 | Instruction | Function | asm | Description |
 | --- | --- | --- | --- |
 | VSUMS | __vr _ve_vsumwsx_vv(__vr vy) | vsum.w.sx |  |
@@ -699,6 +706,7 @@ tags: [llvm, compiler, vector, sxaurora, intrinsics, builtins]
 | VFIMS | not yet implemented |  |  |
 
 ## 7 Vector Gathering/Scattering Instructions
+
 | Instruction | Function | asm | Description |
 | --- | --- | --- | --- |
 | VGT | __vr _ve_vgt_vv(__vr vy) | vgt |  |
@@ -723,6 +731,7 @@ tags: [llvm, compiler, vector, sxaurora, intrinsics, builtins]
 | VSCL | void _ve_vsclot_vvm(__vr vx, __vr vy, __vm256 vm) | vscl.ot |  |
 
 ## 8 Vector Mask Register Instructions
+
 | Instruction | Function | asm | Description |
 | --- | --- | --- | --- |
 | ANDM | __vm256 _ve_andm_mmm(__vm256 vmy, __vm256 vmz) | andm | vmx[:] = vmy[:] ? vmy[:] & vmz[:] : vmz[:] |
@@ -742,6 +751,7 @@ tags: [llvm, compiler, vector, sxaurora, intrinsics, builtins]
 | TOVM | unsigned long int _ve_tovm_sm(__vm256 vmy) | tovm |  |
 
 ## 9 Vector Control Instructions
+
 | Instruction | Function | asm | Description |
 | --- | --- | --- | --- |
 | LVL | void _ve_lvl(int vl) | lvl |  |
@@ -750,11 +760,13 @@ tags: [llvm, compiler, vector, sxaurora, intrinsics, builtins]
 | LVIX | not yet implemented |  |  |
 
 ## 10 Control Instructions
+
 | Instruction | Function | asm | Description |
 | --- | --- | --- | --- |
 | SVOB | void _ve_svob(void) | svob |  |
 
 ## 11 Others
+
 | Instruction | Function | asm | Description |
 | --- | --- | --- | --- |
 |  | unsigned long int _ve_pack_f32p(float const* p0, float const* p1) | ldu,ldl,or |  |
@@ -767,3 +779,4 @@ tags: [llvm, compiler, vector, sxaurora, intrinsics, builtins]
 |  | __vm512 _ve_insert_vm512u(__vm512 vmx, __vm vmy) |  |  |
 |  | __vm512 _ve_insert_vm512l(__vm512 vmx, __vm vmy) |  |  |
 
+---
