@@ -240,5 +240,7 @@ use cases using LLVM-VE, we'd be very pleased to hear about them!
 ---
 
 [SX-Aurora WEB Forums](https://www.hpc.nec/forums/)
+
 [SX-Aurora Documentation](https://www.hpc.nec/documents/)
+
 [Wikipedia](https://en.wikipedia.org/wiki/SX-Aurora_TSUBASA)
