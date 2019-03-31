@@ -7,8 +7,12 @@ category: posts
 tags: [llvm, compiler, vector, sxaurora, intrinsics, builtins]
 ---
 
+This document contains the list of vector intrinsics that were added to the LLVM backend for the SX-Aurora TSUBASA vector engine. The proprietary **ncc** compiler from NEC is not exposing vector instrinsics, there the focus is on auto-vectorization and optimization, thus intrinsics are actually not needed.
 
-## 0 Vector Transfer Instructions
+The intrinsics in this document resemble closely the vector ISA of the SX-Aurora VE. LLVM does not (yet) support properly predication (vector masks) and the variable vector length, there are efforts underway for supporting these (SVE/EVL, VP) and making them some day first-class entities.
+ 
+
+## 0. Vector Transfer Instructions
 
 | Instruction | Function | asm | Description |
 | --- | --- | --- | --- |
@@ -81,7 +85,7 @@ tags: [llvm, compiler, vector, sxaurora, intrinsics, builtins]
 | VMV | __vr _ve_vmv_vsv(unsigned int sy, __vr vz) | vmv |  |
 | VMV | __vr _ve_vmv_vsv(unsigned int N, __vr vz) | vmv |  |
 
-## 1 Vector Fixed-Point Arithmetic Operation Instructions
+## 1. Vector Fixed-Point Arithmetic Operation Instructions
 
 | Instruction | Function | asm | Description |
 | --- | --- | --- | --- |
@@ -327,7 +331,7 @@ tags: [llvm, compiler, vector, sxaurora, intrinsics, builtins]
 | VCMX | __vr _ve_vminsl_vsvmv(long int sy, __vr vz, __vm256 vm, __vr vd) | vmins.l | vx[:] = vm[:] ? min(sy, vz[:]) : vd[:] |
 | VCMX | __vr _ve_vminsl_vsvmv(long int I, __vr vz, __vm256 vm, __vr vd) | vmins.l | vx[:] = vm[:] ? min(I, vz[:]) : vd[:] |
 
-## 2 Vector Logical Arithmetic Operation Instructions
+## 2. Vector Logical Arithmetic Operation Instructions
 
 | Instruction | Function | asm | Description |
 | --- | --- | --- | --- |
@@ -371,7 +375,7 @@ tags: [llvm, compiler, vector, sxaurora, intrinsics, builtins]
 | VSEQ | __vr _ve_pvsequp_v() | pvseq.up | vx[:] = i |
 | VSEQ | __vr _ve_pvseq_v() | pvseq | vx[:] = i |
 
-## 3 Vector Shift Instructions
+## 3. Vector Shift Instructions
 
 | Instruction | Function | asm | Description |
 | --- | --- | --- | --- |
@@ -434,7 +438,7 @@ tags: [llvm, compiler, vector, sxaurora, intrinsics, builtins]
 | VSFA | __vr _ve_vsfa_vvssmv(__vr vz, unsigned long int sy, unsigned long int sz, __vm256 vm, __vr vd) | vsfa | vx[:] = vm[:] ? (vz[:] << (sy & 0x7)) + sz : vd[:] |
 | VSFA | __vr _ve_vsfa_vvssmv(__vr vz, unsigned long int I, unsigned long int sz, __vm256 vm, __vr vd) | vsfa | vx[:] = vm[:] ? (vz[:] << (I & 0x7)) + sz : vd[:] |
 
-## 4 Vector Floating-Point Operation Instructions
+## 4. Vector Floating-Point Operation Instructions
 
 | Instruction | Function | asm | Description |
 | --- | --- | --- | --- |
@@ -633,7 +637,7 @@ tags: [llvm, compiler, vector, sxaurora, intrinsics, builtins]
 | VCVD | __vr _ve_vcvtds_vv(__vr vy) | vcvt.d.s | vx[:] = (double)vy[:] |
 | VCVS | __vr _ve_vcvtsd_vv(__vr vy) | vcvt.s.d | vx[:] = (float)vy[:] |
 
-## 5 Vector Mask Arithmetic Instructions
+## 5. Vector Mask Arithmetic Instructions
 
 | Instruction | Function | asm | Description |
 | --- | --- | --- | --- |
@@ -660,7 +664,7 @@ tags: [llvm, compiler, vector, sxaurora, intrinsics, builtins]
 | VFMF | __vm512 _ve_pvfmks_Mcv(int cc, __vr vz) |  |  |
 | VFMF | __vm512 _ve_pvfmks_McvM(int cc, __vr vz, __vm512 vm) |  |  |
 
-## 6 Vector Recursive Relation Instructions
+## 6. Vector Recursive Relation Instructions
 
 | Instruction | Function | asm | Description |
 | --- | --- | --- | --- |
@@ -705,7 +709,7 @@ tags: [llvm, compiler, vector, sxaurora, intrinsics, builtins]
 | VFIMA | not yet implemented |  |  |
 | VFIMS | not yet implemented |  |  |
 
-## 7 Vector Gathering/Scattering Instructions
+## 7. Vector Gathering/Scattering Instructions
 
 | Instruction | Function | asm | Description |
 | --- | --- | --- | --- |
@@ -730,7 +734,7 @@ tags: [llvm, compiler, vector, sxaurora, intrinsics, builtins]
 | VSCL | void _ve_vsclot_vv(__vr vx, __vr vy) | vscl.ot |  |
 | VSCL | void _ve_vsclot_vvm(__vr vx, __vr vy, __vm256 vm) | vscl.ot |  |
 
-## 8 Vector Mask Register Instructions
+## 8. Vector Mask Register Instructions
 
 | Instruction | Function | asm | Description |
 | --- | --- | --- | --- |
@@ -750,7 +754,7 @@ tags: [llvm, compiler, vector, sxaurora, intrinsics, builtins]
 | LZVM | unsigned long int _ve_lzvm_sm(__vm256 vmy) | lzvm |  |
 | TOVM | unsigned long int _ve_tovm_sm(__vm256 vmy) | tovm |  |
 
-## 9 Vector Control Instructions
+## 9. Vector Control Instructions
 
 | Instruction | Function | asm | Description |
 | --- | --- | --- | --- |
@@ -759,13 +763,13 @@ tags: [llvm, compiler, vector, sxaurora, intrinsics, builtins]
 | SMVL | not yet implemented |  |  |
 | LVIX | not yet implemented |  |  |
 
-## 10 Control Instructions
+## 10. Control Instructions
 
 | Instruction | Function | asm | Description |
 | --- | --- | --- | --- |
 | SVOB | void _ve_svob(void) | svob |  |
 
-## 11 Others
+## 11. Others
 
 | Instruction | Function | asm | Description |
 | --- | --- | --- | --- |
