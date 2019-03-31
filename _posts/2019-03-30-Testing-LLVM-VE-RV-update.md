@@ -77,6 +77,10 @@ Following steps lead to an installation of LLVM-VE-RV:
 
 ### 0. Prerequisites
 
+A machine with installed SX-Aurora TSUBASA vector engines. Makes sense
+to do all this on it. It should have the SDK installed, well, at least
+the binutils-ve package.
+
 Lots of disk space! At least 12GB! Preferably on SSD. The LLVM and
 clang repositories are huge and the build requires a lot of disk
 space. A shallow clone (see step 2, below) will save some disk space.
@@ -131,7 +135,7 @@ The repositories are cloned with depth=1 and can be expanded later, if needed, b
 ```bash
 make deep
 ```
-You'll know when you must do this. When you really do development and
+You'll know when you must do this: when you really do development and
 commit things and push merge requests.
 
 
