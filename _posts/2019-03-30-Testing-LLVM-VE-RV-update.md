@@ -85,7 +85,7 @@ Lots of disk space! At least 12GB! Preferably on SSD. The LLVM and
 clang repositories are huge and the build requires a lot of disk
 space. A shallow clone (see step 2, below) will save some disk space.
 
-Connecton to the internet and/or appropriate proxy setup. For *git*
+Connection to the internet and/or appropriate proxy setup. For *git*
 and *wget* you'd need to set up the *http_proxy* and *ftp_proxy*
 environment variables.
 
@@ -239,4 +239,6 @@ use cases using LLVM-VE, we'd be very pleased to hear about them!
 
 ---
 
+[SX-Aurora WEB Forums](https://www.hpc.nec/forums/)
+[SX-Aurora Documentation](https://www.hpc.nec/documents/)
 [Wikipedia](https://en.wikipedia.org/wiki/SX-Aurora_TSUBASA)
