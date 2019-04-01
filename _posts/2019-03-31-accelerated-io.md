@@ -117,6 +117,11 @@ A sample call to iozone with record size `-r 1m` and 2 threads is:
 ```sh
 iozone-VE -s 1g -r 1m -t 2 -F /dev/shm/a1 /dev/shm/a2 -i 0 -i 1
 ```
+Two block/record sizes were measured: 1MB and 16MB. The 4dma values on
+huge pages are better with larger record size, they actually converge
+to the accelerated IO values with transfers in the range of 128-256MB,
+only these could not be measured with this method due to the way how
+iozone is allocating its buffers.
 
 The tests were done on four setups:
 
@@ -125,28 +130,10 @@ The tests were done on four setups:
 * VEOS 2.0.3 with 4dma on hugepages (prefixed call to iozone by `hugectl --heap`,
 * VEOS 2.0.3 with VE preloaded accelerated IO library.
 
-The results are summarized in the following table. Only the initial write and initial read results are shown, the re-writer and re-reader results are systematically higher.
+The results are summarized in the following two figures. Only the initial write and initial read results are shown, the re-writer and re-reader results are systematically higher.
 
-| op | block | threads | veos-2.0.3 | 4dma | 4dma hugepage | accelerated io |
-| --- | --- | --- | --- | --- | --- | --- |
-| read  | 1MB | 1 |  336 MB/s |  597 MB/s | 1076 MB/s |  2471 MB/s |
-| write | 1MB | 1 |  278 MB/s |  434 MB/s |  775 MB/s |  1410 MB/s |
-| --- | --- | --- | --- | --- | --- | --- |
-| read  | 1MB | 4 | 1061 MB/s | 1577 MB/s | 3707 MB/s |  5626 MB/s |
-| write | 1MB | 4 |  731 MB/s | 1456 MB/s | 2984 MB/s |  3738 MB/s |
-| --- | --- | --- | --- | --- | --- | --- |
-| read  | 1MB | 8 | 2134 MB/s | 2230 MB/s | 6584 MB/s | 10170 MB/s |
-| write | 1MB | 8 | 2017 MB/s | 1841 MB/s | 4913 MB/s |  7716 MB/s |
-| --- | --- | --- | --- | --- | --- | --- |
-| read  | 16MB | 1 |  731 MB/s |  780 MB/s | 1739 MB/s |  2373 MB/s |
-| write | 16MB | 1 |  541 MB/s |  603 MB/s | 1306 MB/s |  1819 MB/s |
-| --- | --- | --- | --- | --- | --- | --- |
-| read  | 16MB | 4 | 1092 MB/s | 2085 MB/s | 5089 MB/s |  6350 MB/s |
-| write | 16MB | 4 | 1181 MB/s | 1764 MB/s | 4195 MB/s |  3973 MB/s |
-| --- | --- | --- | --- | --- | --- | --- |
-| read  | 16MB | 8 | 1949 MB/s | 1913 MB/s | 6694 MB/s | 10138 MB/s |
-| write | 16MB | 8 | 1935 MB/s | 2061 MB/s | 7117 MB/s |  8605 MB/s |
-| --- | --- | --- | --- | --- | --- | --- |
+![write_bw](/img/accelio_iozone_write_bw.png)
+![read_bw](/img/accelio_iozone_read_bw.png)
 
 
 ## Conclusion
