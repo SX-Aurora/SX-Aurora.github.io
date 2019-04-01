@@ -72,6 +72,7 @@ more and use huge pages on the VH side, thus being less fragmented and
 faster.
 
 ![VHSHM sketch](/img/VHSHM_sketch.png)
+
 Sketch of VHSHM mechanisms. A system V shared memory segment inside
 huge pages on VH side is registered with the DMAATB on the VE, another
 memory buffer on the VE, part of the VE process, is also registered
