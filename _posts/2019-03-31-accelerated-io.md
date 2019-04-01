@@ -3,6 +3,7 @@ layout: post
 title: "VE Accelerated IO" 
 author: Erich Focht
 excerpt: "Accelerate IO with a preloaded library that uses registered huge page buffers and the user DMA descriptors on the VE"
+image: /img/accelio_iozone_read_bw.png
 category: posts
 comments: true
 tags: [library, IO, performance, DMA, vector, sxaurora]
