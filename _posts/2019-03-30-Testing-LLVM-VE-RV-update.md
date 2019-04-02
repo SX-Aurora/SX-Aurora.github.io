@@ -49,10 +49,11 @@ executables is now possible without the proprietary *ncc*, all that is
 needed is the VE binutils package, its assembler and linker. *All this
 is experimental!*
 
-The RegionVectorizer RV has implemented FP32 vectorization (not
-packed) and research was done on generalizing the concept of
-vectorization towards tensors and multi-dimensional vectorization. The
-later concepts were presented at the [WPMVP 2019
+Thanks to the work of CDL at Saarland University, Simon Moll and
+Matthias Kurtenacker, the RegionVectorizer RV has implemented FP32
+vectorization (not packed) and research was done on generalizing the
+concept of vectorization towards tensors and multi-dimensional
+vectorization. The later concepts were presented at the [WPMVP 2019
 workshop](https://ppopp19.sigplan.org/home/WPMVP-2019#program). Furthermore,
 a presentation at the [29th Workshop on Sustained Simulation
 Performance](https://www.sc.cc.tohoku.ac.jp/wssp29/en/program.html)
