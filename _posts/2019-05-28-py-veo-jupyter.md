@@ -9,7 +9,7 @@ tags: [python, jupyter, vector, sxaurora, offloading]
 
 *Erich Focht*
 
-The *py-veo Python API to vector engine offloading VEO allows the easy
+The *py-veo* Python API to vector engine offloading VEO allows the easy
 use of Notebooks for interactively working on the SX-Aurora vector
 engine. This post describes how Jupyter notebook can be installed and
 used and shows an example notebook with code running offloaded on the
@@ -27,13 +27,13 @@ with one Jupyter notebook ready to load and run. It shows how one can
 actually measure performance counters of the executed VE kernel and
 computed some meaningful metrics like MOPS, MFLOPS, etc.
 
-## Install prerequisites
+### Install prerequisites
 
 ```
 sudo yum install -y python-devel python-virtualenv
 ```
 
-## Create and configure a virtualenv containing jupyter 
+### Create and configure a virtualenv containing jupyter 
 
 ```
 virtualenv jupy
@@ -46,7 +46,7 @@ pip install py-veo
 pip install psutil
 ```
 
-### Create a password
+#### Create a password
 ```
 python -c 'from notebook.auth import passwd ; password = passwd() ; print password'
 #-> Enter password: 
@@ -55,23 +55,23 @@ python -c 'from notebook.auth import passwd ; password = passwd() ; print passwo
 ```
 
 
-### Generate a config and edit password
+#### Generate a config and edit password
 ```
 jupyter notebook --generate-config
 #-> Writing default config to: /home/focht/.jupyter/jupyter_notebook_config.py
 ```
 
-### Modify c.NotebookApp.password in generated config, put in password hash
+#### Modify c.NotebookApp.password in generated config, put in password hash
 ```
 vim /home/focht/.jupyter/jupyter_notebook_config.py
 ```
 
-### Run the jupyter notebook server
+#### Run the jupyter notebook server
 ```
 jupyter notebook
 ```
 
-## Copy jupyter notebook and load it
+### Copy jupyter notebook and load it
 
 Copy the file *py-veo-perf.ipynb* to the *jupy/* directory,
 open the web browser pointing to localhost:8888,
@@ -81,6 +81,10 @@ Needless to say, the machine on which you run this must have a VE card
 installed.
 
 The notebook looks like [this](/img/jupyter-py-veo-perf.pdf).
+
+
+
+
 
 ---
 
