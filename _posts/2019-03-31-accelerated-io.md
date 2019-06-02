@@ -95,6 +95,11 @@ repository
 [https://sx-aurora.com/repos/veos/ef_extra](https://sx-aurora.com/repos/veos/ef_extra).
 It will eventually make it into the main VEOS release.
 
+**NOTE: (June 3, 2019)** The improved system DMA patch described above, using bulk
+virtual to physical translations and overlapping DMA and translations,
+has been released in VEOS 2.1 and is now available for everybody by
+default.
+
 
 ## Limitations
 
@@ -103,6 +108,9 @@ with mechanisms that don't allow the sharing of the
 descriptors. Therefore accelerated IO can currently not be used when
 Infiniband or ScateFS are in use. We expect that this limitation will
 be lifted towards the end of May 2019.
+
+**NOTE: (June 3, 2019)** This limitation is indeed lifted with the
+release of VEOS 2.1.
 
 ## Performance
 
