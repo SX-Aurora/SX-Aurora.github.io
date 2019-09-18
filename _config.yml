@@ -31,12 +31,13 @@ navbar-links:
     - NEC VEOS software: "http://www.nec.com/en/global/prod/hpc/aurora/ve-software/index.html"
     - VEOS related docs: "https://github.com/veos-sxarr-NEC/doc"
     - Aurora Web Forum: "https://www.hpc.nec"
+    - Aurora Dev AI Blog: "https://sx-aurora-dev.github.io/blog/"
     - SX-Aurora Wikipedia: "https://en.wikipedia.org/wiki/SX-Aurora_TSUBASA"
   Projects:
     - VEOS official github: "https://github.com/veos-sxarr-NEC"
     - SX-Aurora github: "https://github.com/sx-aurora"
     - Frovedis: "https://github.com/frovedis/frovedis"
-    - LLVM-VE: "https://github.com/SXAuroraTSUBASAResearch/llvm"
+    - LLVM-VE: "https://github.com/sx-aurora-dev/llvm-project"
     - MKL-DNN for Aurora: "https://github.com/necla-ml/gen-dnn"
   Search: "search"
 
