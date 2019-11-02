@@ -3,7 +3,7 @@ layout: post
 title: "HPCG Performance Efficiency on VE at 5.8%"
 author: Erich Focht
 excerpt: "Tuning the HPCG benchmark for the SX-Aurora TSUBASA."
-image: /img/accelio_iozone_read_bw.png
+image: /img/hpcg_tuning_path.png
 category: posts
 comments: true
 tags: [benchmark, HPCG, performance, efficiency, vector, sxaurora]
@@ -13,7 +13,7 @@ tags: [benchmark, HPCG, performance, efficiency, vector, sxaurora]
 
 This post describes some bits of the tuning activity which lifted the
 VE HPCG performance from ~67 GFLOPS to 125.5 GFLOPS on a VE10B and
-nearly doubled the performance efficiency to 5.8%.
+nearly doubled the performance efficiency to 5.83%.
 
 
 ## Introduction
@@ -243,7 +243,7 @@ slow scalar processor, matrix splitting and especially finding and
 eliminating unnecessary operations. The figure below sketches the
 steps and progress.
 
-![HPCG vs. HPL power consumption](/img/HPCG_power_1ve.png)
+![HPCG tuning steps](/img/hpcg_tuning_path.png)
 
 While Aurora is easy to program and debug, some components are
 complicating things, like the 4-way skewed LLC cache. It has
