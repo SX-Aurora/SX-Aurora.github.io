@@ -259,7 +259,7 @@ subsystem that is actually easy to handle.
 With other vendors releasing the binaries of their HPCG and HPL
 versions I think it makes sense to have them easily accessible also
 for the SX-Aurora VE. So... watch out for binary releases on
-https://github.com/efocht/hpcg-ve-bin .
+[https://github.com/efocht/hpcg-ve-bin](https://github.com/efocht/hpcg-ve-bin).
 
 ---
 
