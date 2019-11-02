@@ -40,11 +40,10 @@ the highest efficiency, ranging between 10.2 and **11.4%**. Komatsu et
 al have described very nicely the tuning efforts for reaching this
 ground breaking efficiency eg. in [this poster at
 SC15](http://sc15.supercomputing.org/sites/all/themes/SC15images/tech_poster/poster_files/post277s2-file2.pdf).
-The core takeaways from that effort are: - the ELL matrix format,
-multicoloring and hyperplanes are well suited for the vector machine,
-- the assignable data buffers (ADB) of the SX-ACE helps mitigate the
-SPMV/GS gather memory access, - data rearrangements for contiguous
-access are important.
+The core takeaways from that effort are:
+- the ELL matrix format, multicoloring and hyperplanes are well suited for the vector machine,
+- the assignable data buffers (ADB) of the SX-ACE helps mitigate the SPMV/GS gather memory access,
+- data rearrangements for contiguous access are important.
 
 With 1 Byte per FLOP the SX-ACE is the machine with the highest
 relative memory bandwidth in the list, which explains its leading
