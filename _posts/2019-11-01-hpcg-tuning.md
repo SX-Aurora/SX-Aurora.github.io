@@ -167,7 +167,7 @@ plus a separate ELLPACK matrix for the halo part. It also supports
 three reorderings: (1) Hyperplane, (2) Hypersphere and (3)
 Multicoloring. Finally: it supports a classical Gauss-Seidel
 substitution as well as one which uses L and U matrices separately and
-takes advantage of the symmetry of the problem.
+takes advantage of the symmetry of the Gauss-Seidel sweep.
 
 Unfortunately the Hyperspheres approach turned out to widen the U
 matrix in ELLPACK format thus adding more padding entries than
