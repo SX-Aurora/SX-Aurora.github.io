@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "HPCG Performance Efficiency on VE at ~~5.8%~~ 5.99%"
+title: "HPCG Performance Efficiency on VE at 5.99%"
 author: Erich Focht
 excerpt: "Tuning the HPCG benchmark for the SX-Aurora TSUBASA."
 image: /img/hpcg_tuning_path.png
