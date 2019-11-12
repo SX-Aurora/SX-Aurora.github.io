@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "HPCG Performance Efficiency on VE at 5.8%"
+title: "HPCG Performance Efficiency on VE at ~~5.8%~~ 5.99%"
 author: Erich Focht
 excerpt: "Tuning the HPCG benchmark for the SX-Aurora TSUBASA."
 image: /img/hpcg_tuning_path.png
@@ -12,8 +12,13 @@ tags: [benchmark, HPCG, performance, efficiency, vector, sxaurora]
 *Erich Focht*
 
 This post describes some bits of the tuning activity which lifted the
-VE HPCG performance from ~67 GFLOPS to 125.5 GFLOPS on a VE10B and
-nearly doubled the performance efficiency to 5.83%.
+VE HPCG performance from ~67 GFLOPS to ~~125.5~~ 128.8 GFLOPS on a
+VE10B and nearly doubled the performance efficiency to 5.99%. Since
+the first version of this post some more tunings of the setup and
+optimization phases were done, raising the efficiency from the 5.83%
+reported earlier. This revised version of the article also contains
+new performance values for the 8 VE measurement on a NEC A300-8
+system.
 
 
 ## Introduction
@@ -192,19 +197,19 @@ The result of HPCG running on one VE 10B, with a pure MPI approach (8
 processes) is:
 ```
 GFLOP/s Summary: 
-  Raw DDOT: 232.766
-  Raw WAXPBY: 108.01
-  Raw SpMV: 98.7324
-  Raw MG: 141.849
-  Raw Total: 133.382
-  Total with convergence overhead: 133.382
-  Total with convergence and optimization phase overhead: 125.469
+  Raw DDOT: 230.742
+  Raw WAXPBY: 106.772
+  Raw SpMV: 98.1001
+  Raw MG: 143.969
+  Raw Total: 134.7
+  Total with convergence overhead: 134.7
+  Total with convergence and optimization phase overhead: 128.834
 ...
 __________ Final Summary __________: 
-  HPCG result is VALID with a GFLOP/s rating of: 125.469
-      HPCG 2.4 Rating (for historical value) is: 127.649
+  HPCG result is VALID with a GFLOP/s rating of: 128.834
+      HPCG 2.4 Rating (for historical value) is: 130.253
 ```
-This corresponds to **5.835% efficiency**.
+This corresponds to **5.99% performance efficiency**.
 
 The power consumption during a HPCG run is noteworthy. I simply looped
 over a simple command like
@@ -226,6 +231,17 @@ halo exchange and computation, but the lack of independent progress
 threads in the VE's MPI are a problem that still needs to be
 tackled. Driving asynchronous MPI calls with MPI_Iprobe() works, but
 the benefit was limited.
+
+**NOTE November 12, 2019** With new measurements on A300-8 I reached
+in a long run
+```
+  HPCG result is VALID with a GFLOP/s rating of: 932.145
+      HPCG 2.4 Rating (for historical value) is: 952.568
+```
+which represents 5.41% of the peak performance. This was done by
+adding the code that overlaps computation and communication, fixing
+a problem in the process distribution and further tuning the
+optimization phase.
 
 
 ## Conclusion and Outlook
