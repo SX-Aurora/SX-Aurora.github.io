@@ -14,7 +14,8 @@ tags: [veo, vector, sxaurora, offloading, compilers]
 
 With the update of the ncc/nc++/nfort compilers to the versions 3.0.1
 and higher we saw sometimes that a VEO program failed in the
-`veo_load_library()` call, reporting that the VE .so library could not be found:
+`veo_load_library()` call, reporting that the VE .so library could not
+be found, for example like this:
 
 ```
 failed veo_load_library: No such file or directory
