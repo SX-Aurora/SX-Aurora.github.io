@@ -13,7 +13,7 @@ tags: [monitoring, tools, performance, vector, sxaurora]
 The monitoring tool `veperf` was introduced in November 2018 in the
 blog post [VE monitoring with
 veperf](https://sx-aurora.github.io/posts/VE-monitoring-veperf/). It
-part of the [py-veosinfo](https://github.com/sx-aurora/py-veosinfo)
+is part of the [py-veosinfo](https://github.com/sx-aurora/py-veosinfo)
 package and displays live performance metrics of own running VE
 programs.
 
