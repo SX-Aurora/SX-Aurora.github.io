@@ -181,6 +181,12 @@ SUM VE1: MOPS=469522   MFLOPS=402411   LOADBW=279.014GB/s STOREBW=196.318GB/s PO
 * **POWER**:       Power consumption of the VE in Watts. No VH related power consumption is considered.
 * **ENERGY**:      Energy consumed by the VE since `veperf` was started, in kiloJoules. No VH related power consumption is considered.
 
+**NOTE:** All metrics except *USRSEC*, *POWER* and *ENERGY* are giving the values over the last displayed time interval.
+*USRSEC* shows the time that the executable was using the VE core. *POWER* is measured at the end of the time interval!
+If you care about an accurate power measurement, chose a small time interval with the `-d` option, 1 or 2s. *ENERGY* is
+a time integral of the power from the start of the execution of the `veperf` tool, thus if started right before the program and stopped
+right after the program has finished, you'll get the energy spent by each VE in the last displayed output block.
+
 The PMMR register of each VE core is controlling which performance
 metrics are actually active. Currently there is no easy way to control
 this register from user side besides setting `VE_PERF_MODE`, MPI and
