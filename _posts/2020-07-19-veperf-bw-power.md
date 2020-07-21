@@ -68,6 +68,19 @@ sudo yum install py-veosinfo
 The executable ends up installed in `/usr/bin/veperf`.
 
 
+### Local install without root privileges
+
+If you have no root privileges you can unpack the localinstall tarball in your home directory:
+```
+cd ~
+wget https://github.com/SX-Aurora/py-veosinfo/releases/download/v2.5.1/py-veosinfo-2.5.1-localinstall-py27-py36.tgz
+tar xzvf py-veosinfo-2.5.1-localinstall-py27-py36.tgz
+```
+
+Normally you should be able to now execute `veperf` because
+`~/.local/bin` is being added to your `$PATH` if it exists, on RHEL or
+CentOS distributions.
+
 
 ## Usage
 
