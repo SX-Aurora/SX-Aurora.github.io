@@ -76,6 +76,9 @@ cd ~
 wget https://github.com/SX-Aurora/py-veosinfo/releases/download/v2.5.1/py-veosinfo-2.5.1-localinstall-py27-py36.tgz
 tar xzvf py-veosinfo-2.5.1-localinstall-py27-py36.tgz
 ```
+It is essential to do this in `$HOME` because that puts the veosinfo
+(binary) module in a default place where python finds it without need
+to manipulate PYTHONPATH.
 
 Normally you should be able to now execute `veperf` because
 `~/.local/bin` is being added to your `$PATH` if it exists, on RHEL or
