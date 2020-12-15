@@ -7,6 +7,9 @@ category: posts
 tags: [llvm, compiler, vector, sxaurora, intrinsics, builtins]
 ---
 
+**NOTE:** The intrinsics described in this document (usually called *ve* intrinsics) were deprecated in the LLVM-VE compiler som time during 2020. They have been replaced by variants that include in each vector instruction the vector length for the instruction described by the intrinsic: the *vel* intrinsics. Carrying the vector length along with the intrinsic allows for reordering the instructions to some extent and generate automatically instructions that load the proper vector length. The new list can be found here: https://sx-aurora-dev.github.io/velintrin.html .
+
+
 This document contains the list of vector intrinsics that were added to the LLVM backend for the SX-Aurora TSUBASA vector engine. The proprietary **ncc** compiler from NEC is not exposing vector instrinsics, there the focus is on auto-vectorization and optimization, thus intrinsics are actually not needed.
 
 The intrinsics in this document resemble closely the vector ISA of the SX-Aurora VE. LLVM does not (yet) support properly predication (vector masks) and the variable vector length, there are efforts underway for supporting these (SVE/EVL, VP) and making them some day first-class entities.
