@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Porting and Optimizing Molecular Docking Simulations on SX-Aurora Vector Engine (WSSP2021)
+title: "Porting and Optimizing Molecular Docking Simulations on SX-Aurora Vector Engine (WSSP2021)"
 excerpt: Presentation on porting of AutoDock to the SX-Aurora TSUBASA Vector Engine.
 category: posts
 comments: true
