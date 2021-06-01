@@ -5,7 +5,6 @@ excerpt: Presentation on porting of AutoDock to the SX-Aurora TSUBASA Vector Eng
 category: posts
 comments: true
 tags: [ve, sxaurora, vector, autodock, genetic algorithm, molecular docking]
-draft: false
 ---
 
 ### Presentation at the Workshop for Sustained Simulation Performance, March 16-19, 2021.
