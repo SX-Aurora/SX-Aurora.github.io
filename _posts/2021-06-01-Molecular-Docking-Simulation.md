@@ -8,9 +8,9 @@ tags: [ve, sxaurora, vector, autodock, genetic algorithm, molecular docking]
 draft: false
 ---
 
-### Presentation at the Workshop for Sustained Simulation Performance (virtual), March 16-19, 2021.
+### Presentation at the Workshop for Sustained Simulation Performance, March 16-19, 2021.
 
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTxz4Jnz2P5ajmXULigMJfpANQMOY9MOn0gzKQYuaj0DKBOf-ZISOm5ki06C-JOFsmTSfXJBMeg5L0g/embed?start=false&loop=false&delayms=5000" frameborder="0" width="1440" height="839" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTxz4Jnz2P5ajmXULigMJfpANQMOY9MOn0gzKQYuaj0DKBOf-ZISOm5ki06C-JOFsmTSfXJBMeg5L0g/embed?start=false&loop=false&delayms=5000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 ---
 
