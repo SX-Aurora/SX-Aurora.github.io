@@ -130,8 +130,6 @@ work even with higher optimization levels than `-O1`. Still, they
 don't seem to be aimed at a wide public... So you're on your own if
 you play with them.
 
-<iframe src="https://sxauroratsubasa-sakura-ne-jp.translate.goog/documents/sdk/SDK_VectorTypeExtention/index.html?_x_tr_sl=ja&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp" style="width:1400px; height: 900px;"></iframe>
-
 
 ---
 
